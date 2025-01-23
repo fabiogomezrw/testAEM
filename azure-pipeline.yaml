@@ -1,0 +1,11 @@
+# azure-pipelines.yml
+trigger:
+- main  # Change this to your default branch if needed
+
+pool:
+  vmImage: 'ubuntu-latest'  # Choose the VM image you want to use
+
+steps:
+- script: |
+    echo "Hola Mundo"
+  displayName: 'Echo Hola Mundo'
