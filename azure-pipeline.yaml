@@ -1,9 +1,13 @@
-# azure-pipelines.yml
-trigger:
-- main  # Change this to your default branch if needed
-
+pr:
+  branches:
+    include:
+    - main
+    - develop
+  paths:
+      include:
+      - ui.frontend
 pool:
-  vmImage: 'ubuntu-latest'  # Choose the VM image you want to use
+  vmImage: ubuntu-latest
 
 steps:
 - script: |
